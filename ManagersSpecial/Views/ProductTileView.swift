@@ -5,6 +5,7 @@
 //  Created by Todd Thomas on 5/27/21.
 //
 
+import SDWebImageSwiftUI
 import SwiftUI
 
 struct ProductTileView: View {
@@ -13,8 +14,14 @@ struct ProductTileView: View {
   var body: some View {
     VStack {
       HStack {
-        Image(systemName: "photo")
-          .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+        WebImage(url: viewModel.imageUrl)
+          .resizable()
+          .placeholder {
+            Image(systemName: "photo")
+              .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+          }
+          .indicator(.activity)
+          .scaledToFit()
         Spacer()
         VStack {
           viewModel.originalPrice.map {
