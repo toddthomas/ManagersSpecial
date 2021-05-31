@@ -1,0 +1,174 @@
+{
+  "canvasUnit": 16,
+  "managerSpecials": [
+    {
+      "display_name": "Noodle Dish with Roasted Black Bean Sauce",
+      "height": 8,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/L.png",
+      "original_price": "2.00",
+      "price": "1.00",
+      "width": 16
+    },
+    {
+      "display_name": "Onion Flavored Rings",
+      "height": 8,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/J.png",
+      "original_price": "2.00",
+      "price": "1.00",
+      "width": 8
+    },
+    {
+      "display_name": "Kikkoman Less Sodium Soy Sauce",
+      "height": 8,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/K.png",
+      "original_price": "2.00",
+      "price": "1.00",
+      "width": 8
+    },
+    {
+      "display_name": "Organic Romaine Hearts",
+      "height": 4,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/L.png",
+      "original_price": "3.92",
+      "price": "3.92",
+      "width": 14
+    },
+    {
+      "display_name": "Navel Oranges 4LBS",
+      "height": 6,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/L.png",
+      "original_price": "2.23",
+      "price": "1.29",
+      "width": 4
+    },
+    {
+      "display_name": "Cheddar & Sour Ruffles",
+      "height": 6,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/K.png",
+      "original_price": "1.49",
+      "price": "1.49",
+      "width": 4
+    },
+    {
+      "display_name": "Doritos Ranch",
+      "height": 6,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/K.png",
+      "original_price": "1.49",
+      "price": "1.49",
+      "width": 4
+    },
+    {
+      "display_name": "Lindt Hello Cookies & Cream 1.4 oz",
+      "height": 6,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/K.png",
+      "original_price": "1.49",
+      "price": "1.49",
+      "width": 4
+    },
+    {
+      "display_name": "Kinder Chocolate 50G",
+      "height": 16,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/J.png",
+      "original_price": "1.99",
+      "price": "1.29",
+      "width": 16
+    },
+    {
+      "display_name": "Organic Red Bells Peppers",
+      "height": 16,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/L.png",
+      "original_price": "1.29",
+      "price": "1.29",
+      "width": 16
+    },
+    {
+      "display_name": "Ferrero Rocher 7.9oz Gift Cube",
+      "height": 8,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/L.png",
+      "original_price": "1.29",
+      "price": "1.29",
+      "width": 9
+    },
+    {
+      "display_name": "Reynolds Oven Bags 2CT",
+      "height": 8,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/K.png",
+      "original_price": "1.29",
+      "price": "1.29",
+      "width": 5
+    },
+    {
+      "display_name": "Blue Diamond Almond Roasted Salted 6oz",
+      "height": 3,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/J.png",
+      "original_price": "4.29",
+      "price": "4.29",
+      "width": 3
+    },
+    {
+      "display_name": "Blue Diamond Artisan Nut Thin Sesame 4.24oz",
+      "height": 3,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/J.png",
+      "original_price": "3.99",
+      "price": "3.99",
+      "width": 3
+    },
+    {
+      "display_name": "Blue Diamond Artisan Nut Thin Sesame 4.24oz",
+      "height": 3,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/J.png",
+      "original_price": "3.99",
+      "price": "3.99",
+      "width": 3
+    },
+    {
+      "display_name": "Mochi Ice Cream Cookies N Cream",
+      "height": 4,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/L.png",
+      "original_price": "4.99",
+      "price": "2.99",
+      "width": 3
+    },
+    {
+      "display_name": "Alessi Vinegar Balsamic White 12.75oz",
+      "height": 4,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/K.png",
+      "original_price": "4.49",
+      "price": "4.49",
+      "width": 12
+    },
+    {
+      "display_name": "Alessi Pesto 3.5oz",
+      "height": 4,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/J.png",
+      "original_price": "3.99",
+      "price": "3.99",
+      "width": 4
+    },
+    {
+      "display_name": "Hidden Valley Ranch Cucumber",
+      "height": 5,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/J.png",
+      "original_price": "4.59",
+      "price": "4.59",
+      "width": 5
+    },
+    {
+      "display_name": "Arrowhead Water 1L",
+      "height": 5,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/K.png",
+      "original_price": "0.99",
+      "price": "0.99",
+      "width": 5
+    },
+    {
+      "display_name": "Arrowhead Mountain Spring Water 1.5 L",
+      "height": 5,
+      "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/L.png",
+      "original_price": "1.29",
+      "price": "1.01",
+      "width": 5
+    }
+  ]
+}
+

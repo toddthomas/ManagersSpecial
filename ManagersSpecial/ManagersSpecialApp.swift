@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct ManagersSpecialApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+  @ObservedObject private var store = Store()
+  
+  var body: some Scene {
+    WindowGroup {
+      SpecialsView(store: store)
+        .onAppear {
+          store.update()
         }
     }
+  }
 }

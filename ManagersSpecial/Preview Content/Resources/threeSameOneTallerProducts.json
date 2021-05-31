@@ -1,0 +1,34 @@
+[
+  {
+    "display_name": "Blue Diamond Almond Roasted Salted 6oz",
+    "height": 3,
+    "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/J.png",
+    "original_price": "4.29",
+    "price": "4.29",
+    "width": 3
+  },
+  {
+    "display_name": "Blue Diamond Artisan Nut Thin Sesame 4.24oz",
+    "height": 3,
+    "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/J.png",
+    "original_price": "3.99",
+    "price": "3.99",
+    "width": 3
+  },
+  {
+    "display_name": "Blue Diamond Artisan Nut Thin Sesame 4.24oz",
+    "height": 3,
+    "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/J.png",
+    "original_price": "3.99",
+    "price": "3.99",
+    "width": 3
+  },
+  {
+    "display_name": "Mochi Ice Cream Cookies N Cream",
+    "height": 4,
+    "imageUrl": "https://raw.githubusercontent.com/prestoqinc/code-exercise-ios/master/images/L.png",
+    "original_price": "4.99",
+    "price": "2.99",
+    "width": 3
+  },
+]
