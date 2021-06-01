@@ -25,6 +25,8 @@
 		2E93387D26654F8F00ED16CA /* verySmallProduct.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E93387C26654F8F00ED16CA /* verySmallProduct.json */; };
 		2E9338812665921900ED16CA /* threeSameOneTallerProducts.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9338802665921900ED16CA /* threeSameOneTallerProducts.json */; };
 		2E9338842665A2AE00ED16CA /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2E9338832665A2AE00ED16CA /* SDWebImageSwiftUI */; };
+		2E9338A22666CFB700ED16CA /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 2E9338A12666CFB700ED16CA /* Algorithms */; };
+		2E9338A42666D14900ED16CA /* ChunkedByReductionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9338A32666D14900ED16CA /* ChunkedByReductionTests.swift */; };
 		2EB78F80265CABD6004C0C61 /* ManagersSpecialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB78F7F265CABD6004C0C61 /* ManagersSpecialApp.swift */; };
 		2EB78F82265CABD6004C0C61 /* SpecialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB78F81265CABD6004C0C61 /* SpecialsView.swift */; };
 		2EB78F84265CABD9004C0C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB78F83265CABD9004C0C61 /* Assets.xcassets */; };
@@ -69,6 +71,7 @@
 		2E93387A26654EEE00ED16CA /* narrowProduct.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = narrowProduct.json; sourceTree = "<group>"; };
 		2E93387C26654F8F00ED16CA /* verySmallProduct.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = verySmallProduct.json; sourceTree = "<group>"; };
 		2E9338802665921900ED16CA /* threeSameOneTallerProducts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = threeSameOneTallerProducts.json; sourceTree = "<group>"; };
+		2E9338A32666D14900ED16CA /* ChunkedByReductionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChunkedByReductionTests.swift; sourceTree = "<group>"; };
 		2EB78F7C265CABD6004C0C61 /* ManagersSpecial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManagersSpecial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB78F7F265CABD6004C0C61 /* ManagersSpecialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersSpecialApp.swift; sourceTree = "<group>"; };
 		2EB78F81265CABD6004C0C61 /* SpecialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialsView.swift; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9338A22666CFB700ED16CA /* Algorithms in Frameworks */,
 				2E9338842665A2AE00ED16CA /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +228,7 @@
 		2EB78F90265CABD9004C0C61 /* ManagersSpecialTests */ = {
 			isa = PBXGroup;
 			children = (
+				2E9338A32666D14900ED16CA /* ChunkedByReductionTests.swift */,
 				2EB78FAF265CB3BF004C0C61 /* ProductModelTests.swift */,
 				2E2D776126617BEC001170A8 /* ProductTileViewModelTests.swift */,
 				2E2D7757266009B4001170A8 /* SpecialsModelTests.swift */,
@@ -279,6 +284,7 @@
 			name = ManagersSpecial;
 			packageProductDependencies = (
 				2E9338832665A2AE00ED16CA /* SDWebImageSwiftUI */,
+				2E9338A12666CFB700ED16CA /* Algorithms */,
 			);
 			productName = ManagersSpecial;
 			productReference = 2EB78F7C265CABD6004C0C61 /* ManagersSpecial.app */;
@@ -353,6 +359,7 @@
 			mainGroup = 2EB78F73265CABD6004C0C61;
 			packageReferences = (
 				2E9338822665A2AE00ED16CA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				2E9338A02666CFB600ED16CA /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 			);
 			productRefGroup = 2EB78F7D265CABD6004C0C61 /* Products */;
 			projectDirPath = "";
@@ -425,6 +432,7 @@
 				2E2D776226617BEC001170A8 /* ProductTileViewModelTests.swift in Sources */,
 				2E2D7758266009B4001170A8 /* SpecialsModelTests.swift in Sources */,
 				2E9338772665486800ED16CA /* BundleHelpers.swift in Sources */,
+				2E9338A42666D14900ED16CA /* ChunkedByReductionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,6 +754,14 @@
 				minimumVersion = 2.0.2;
 			};
 		};
+		2E9338A02666CFB600ED16CA /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -753,6 +769,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2E9338822665A2AE00ED16CA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		2E9338A12666CFB700ED16CA /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E9338A02666CFB600ED16CA /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
