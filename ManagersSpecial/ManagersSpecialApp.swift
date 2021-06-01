@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ManagersSpecialApp: App {
-  @ObservedObject private var store = Store()
+  @StateObject private var store = Store()
   
   var body: some Scene {
     WindowGroup {
