@@ -10,48 +10,83 @@ import SwiftUI
 
 struct ProductTileView: View {
   let viewModel: ProductTileViewModel
+  let spacing: CGFloat = 5.0
+  let smallWidth: Float = 130.0
 
   var body: some View {
-    VStack {
-      HStack {
-        WebImage(url: viewModel.imageUrl)
-          .resizable()
-          .placeholder {
-            Image(systemName: "photo")
-              .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-          }
-          .indicator(.activity)
-          .scaledToFit()
-        Spacer()
+    GeometryReader { geometry in
+      VStack {
         VStack {
-          viewModel.originalPrice.map {
-            Text($0)
-              .strikethrough()
-              .font(.title)
-              .fontWeight(.medium)
-              .foregroundColor(.gray)
+          HStack {
+            if viewModel.widthInPixels > smallWidth {
+              WebImage(url: viewModel.imageUrl)
+                .resizable()
+                .placeholder {
+                  Image(systemName: "photo")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                }
+                .indicator(.activity)
+                .scaledToFit()
+
+              Spacer()
+            }
+
+            VStack {
+              let priceFont: Font = viewModel.widthInPixels > smallWidth ? .title2 : .footnote
+
+              viewModel.originalPrice.map {
+                Text($0)
+                  .strikethrough()
+                  .font(priceFont)
+                  .fontWeight(.medium)
+                  //              .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                  .foregroundColor(.gray)
+              }
+
+              Text(viewModel.price)
+                .font(priceFont)
+                .fontWeight(.medium)
+                //            .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                .foregroundColor(.accentColor)
+            }
+            .layoutPriority(1)
           }
-          Text(viewModel.price)
-            .font(.title)
-            .fontWeight(.medium)
-            .foregroundColor(.accentColor)
+          //      .padding([.top], 28.0)
+          .padding([.top, .leading, .trailing])
+
+          Spacer()
+
+          let nameFont: Font = viewModel.widthInPixels > smallWidth ? .body : .caption2
+          Text(viewModel.displayName)
+            .font(nameFont)
+            //        .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+            .multilineTextAlignment(.center)
+            .padding([.bottom, .leading, .trailing])
+            .layoutPriority(2)
+
+          Spacer()
         }
-        .layoutPriority(1)
+        .frame(
+          width: geometry.size.width - (spacing * 2),
+          height: geometry.size.height - (spacing * 2)
+        )
+        .background(Color(.systemBackground))
+        .cornerRadius(10.0)
+        .shadow(radius: 10)
       }
-      .padding([.top, .leading, .trailing])
-      Spacer()
-      Text(viewModel.displayName)
-        .multilineTextAlignment(.center)
-        .padding([.bottom, .leading, .trailing])
-        .layoutPriority(2)
+      // This frame and the `VStack` it modifies exist solely to recenter the
+      // above views within the outer `GeometryReader`. See
+      // https://swiftui-lab.com/geometryreader-bug/.
+      .frame(
+        width: geometry.size.width,
+        height: geometry.size.height,
+        alignment: .center
+      )
     }
     .frame(
+      width: CGFloat(viewModel.widthInPixels),
       height: CGFloat(viewModel.heightInPixels)
     )
-    .aspectRatio(CGFloat(viewModel.aspectRatio), contentMode: .fit)
-    .background(Color(.systemBackground))
-    .cornerRadius(10.0)
-    .shadow(radius: 10)
   }
 }
 

@@ -13,7 +13,7 @@ struct TileRowView: View, Identifiable {
   var id = UUID()
 
   var body: some View {
-    HStack {
+    HStack(spacing: 0) {
       ForEach(products) {
         ProductTileView(
           viewModel: ProductTileViewModel(

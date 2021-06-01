@@ -29,11 +29,13 @@ struct SpecialsView: View {
               pointsPerCanvasUnit: pointsPerCanvasUnit
             )
           }
-        LazyVStack(spacing: 15.0) {
+        LazyVStack {
           ForEach(rows) { $0 }
         }
       }
+      .padding(.bottom)
       .background(Color(.secondarySystemBackground))
+      .edgesIgnoringSafeArea(.bottom)
     }
   }
 }
