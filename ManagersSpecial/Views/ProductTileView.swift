@@ -11,7 +11,7 @@ import SwiftUI
 struct ProductTileView: View {
   let viewModel: ProductTileViewModel
   let spacing: CGFloat = 5.0
-  let smallWidth: Float = 130.0
+  let smallWidth: Float = 135.0
   let verySmallWidth: Float = 75.0
 
   var body: some View {
