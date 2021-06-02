@@ -12,11 +12,16 @@ import Foundation
 class Store: ObservableObject {
   @Published var canvasUnit: Int
   @Published var specials: [Product]
-  @Published var error: ManagersSpecialService.Error? = nil
+  @Published var error: ManagersSpecialService.Error?
 
-  init(canvasUnit: Int = 16, specials: [Product] = []) {
+  init(
+    canvasUnit: Int = 16,
+    specials: [Product] = [],
+    error: ManagersSpecialService.Error? = nil
+  ) {
     self.canvasUnit = canvasUnit
     self.specials = specials
+    self.error = error
   }
 
   private let service = ManagersSpecialService()
