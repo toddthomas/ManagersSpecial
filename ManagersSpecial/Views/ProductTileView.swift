@@ -12,59 +12,61 @@ struct ProductTileView: View {
   let viewModel: ProductTileViewModel
   let spacing: CGFloat = 5.0
   let smallWidth: Float = 130.0
+  let verySmallWidth: Float = 75.0
 
   var body: some View {
     GeometryReader { geometry in
       VStack {
         VStack {
-          HStack {
-            if viewModel.widthInPixels > smallWidth {
-              WebImage(url: viewModel.imageUrl)
-                .resizable()
-                .placeholder {
-                  Image(systemName: "photo")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                }
-                .indicator(.activity)
-                .scaledToFit()
+          if viewModel.widthInPoints < verySmallWidth {
+            // Too narrow for price or description text. Show only the image.
+            ProductImageView(url: viewModel.imageUrl)
+              .cornerRadius(10.0)
+          } else {
+            // Always show price and description text, though possibly at a very
+            // small size. Also show product image if there's enough room.
+            HStack {
+              if viewModel.widthInPoints > smallWidth {
+                ProductImageView(url: viewModel.imageUrl)
 
-              Spacer()
-            }
-
-            VStack {
-              let priceFont: Font = viewModel.widthInPixels > smallWidth ? .title2 : .footnote
-
-              viewModel.originalPrice.map {
-                Text($0)
-                  .strikethrough()
-                  .font(priceFont)
-                  .fontWeight(.medium)
-                  //              .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-                  .foregroundColor(.gray)
+                Spacer()
               }
 
-              Text(viewModel.price)
-                .font(priceFont)
-                .fontWeight(.medium)
-                //            .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-                .foregroundColor(.accentColor)
+              VStack {
+                let priceFont: Font = viewModel.widthInPoints > smallWidth ? .title2 : .footnote
+
+                viewModel.originalPrice.map {
+                  Text($0)
+                    .strikethrough()
+                    .font(priceFont)
+                    .fontWeight(.medium)
+                    //              .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.gray)
+                }
+
+                Text(viewModel.price)
+                  .font(priceFont)
+                  .fontWeight(.medium)
+                  //            .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                  .foregroundColor(.accentColor)
+              }
+              .layoutPriority(1)
             }
-            .layoutPriority(1)
+            //      .padding([.top], 28.0)
+            .padding([.top, .leading, .trailing])
+
+            Spacer()
+
+            let nameFont: Font = viewModel.widthInPoints > smallWidth ? .body : .caption2
+            Text(viewModel.displayName)
+              .font(nameFont)
+              //        .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+              .multilineTextAlignment(.center)
+              .padding([.bottom, .leading, .trailing])
+              .layoutPriority(2)
+
+            Spacer()
           }
-          //      .padding([.top], 28.0)
-          .padding([.top, .leading, .trailing])
-
-          Spacer()
-
-          let nameFont: Font = viewModel.widthInPixels > smallWidth ? .body : .caption2
-          Text(viewModel.displayName)
-            .font(nameFont)
-            //        .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-            .multilineTextAlignment(.center)
-            .padding([.bottom, .leading, .trailing])
-            .layoutPriority(2)
-
-          Spacer()
         }
         .frame(
           width: geometry.size.width - (spacing * 2),
@@ -84,8 +86,8 @@ struct ProductTileView: View {
       )
     }
     .frame(
-      width: CGFloat(viewModel.widthInPixels),
-      height: CGFloat(viewModel.heightInPixels)
+      width: CGFloat(viewModel.widthInPoints),
+      height: CGFloat(viewModel.heightInPoints)
     )
   }
 }

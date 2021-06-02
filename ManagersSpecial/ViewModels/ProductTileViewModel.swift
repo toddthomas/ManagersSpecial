@@ -27,11 +27,11 @@ struct ProductTileViewModel {
     product.imageUrl
   }
 
-  var widthInPixels: Float {
+  var widthInPoints: Float {
     Float(product.width) * pointsPerCanvasUnit
   }
 
-  var heightInPixels: Float {
+  var heightInPoints: Float {
     Float(product.height) * pointsPerCanvasUnit
   }
 

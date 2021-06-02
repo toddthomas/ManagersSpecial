@@ -53,8 +53,8 @@ class ProductTileViewModelTests: XCTestCase {
       pointsPerCanvasUnit: 24.375
     )
 
-    XCTAssertEqual(viewModel.widthInPixels, 390.0)
-    XCTAssertEqual(viewModel.heightInPixels, 195.0)
+    XCTAssertEqual(viewModel.widthInPoints, 390.0)
+    XCTAssertEqual(viewModel.heightInPoints, 195.0)
     XCTAssertEqual(viewModel.aspectRatio, 2.0)
   }
 }
