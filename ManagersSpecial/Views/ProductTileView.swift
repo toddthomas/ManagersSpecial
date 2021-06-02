@@ -40,19 +40,18 @@ struct ProductTileView: View {
                     .strikethrough()
                     .font(priceFont)
                     .fontWeight(.medium)
-                    //              .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                    .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                     .foregroundColor(.gray)
                 }
 
                 Text(viewModel.price)
                   .font(priceFont)
                   .fontWeight(.medium)
-                  //            .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                  .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                   .foregroundColor(.accentColor)
               }
               .layoutPriority(1)
             }
-            //      .padding([.top], 28.0)
             .padding([.top, .leading, .trailing])
 
             Spacer()
@@ -60,7 +59,7 @@ struct ProductTileView: View {
             let nameFont: Font = viewModel.widthInPoints > smallWidth ? .body : .caption2
             Text(viewModel.displayName)
               .font(nameFont)
-              //        .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+              .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
               .multilineTextAlignment(.center)
               .padding([.bottom, .leading, .trailing])
               .layoutPriority(2)
