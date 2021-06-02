@@ -10,6 +10,11 @@ import SwiftUI
 struct TileRowView: View, Identifiable {
   let products: [Product]
   let pointsPerCanvasUnit: Float
+
+  // TODO: `TileRowView`s are passed in a collection to `ForEach` in a SwiftUI
+  // view, so they need to be `Identifiable`. I need to research whether the ID
+  // needs to be essentially a hash of the view's properties in order for
+  // SwiftUI to update views most efficiently.
   var id = UUID()
 
   var body: some View {

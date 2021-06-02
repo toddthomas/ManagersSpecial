@@ -8,6 +8,10 @@
 import Foundation
 
 struct Product: Identifiable, Codable {
+  // TODO: Products are passed in a collection to `ForEach` in a SwiftUI view,
+  // so they need to be `Identifiable`. I need to research whether the ID needs
+  // to be essentially a hash of the product properties in order for SwiftUI to
+  // update views most efficiently.
   var id = UUID()
 
   let displayName: String
