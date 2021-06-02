@@ -38,4 +38,16 @@ struct ProductTileViewModel {
   var aspectRatio: Float {
     Float(product.width) / Float(product.height)
   }
+
+  var originalPriceText: String {
+    if let originalPrice = originalPrice {
+      return "Regular price \(originalPrice), now "
+    } else {
+      return ""
+    }
+  }
+
+  var accessibilityLabelText: String {
+    "\(displayName). \(originalPriceText)\(price)"
+  }
 }

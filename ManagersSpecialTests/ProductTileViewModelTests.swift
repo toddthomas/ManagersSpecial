@@ -35,6 +35,15 @@ class ProductTileViewModelTests: XCTestCase {
 
     XCTAssertEqual(viewModel.originalPrice!, "$2.99")
     XCTAssertEqual(viewModel.price, "$1.99")
+
+    let expectedAccessibilityLabelText =
+      """
+      Canteloupe. Regular price $2.99, now $1.99
+      """
+    XCTAssertEqual(
+      viewModel.accessibilityLabelText,
+      expectedAccessibilityLabelText
+    )
   }
 
   func testFullPriceProduct() throws {
@@ -45,6 +54,15 @@ class ProductTileViewModelTests: XCTestCase {
 
     XCTAssertNil(viewModel.originalPrice)
     XCTAssertEqual(viewModel.price, "$1.99")
+
+    let expectedAccessibilityLabelText =
+      """
+      Canteloupe. $1.99
+      """
+    XCTAssertEqual(
+      viewModel.accessibilityLabelText,
+      expectedAccessibilityLabelText
+    )
   }
 
   func testDimensions() throws {

@@ -89,6 +89,8 @@ struct ProductTileView: View {
       width: CGFloat(viewModel.widthInPoints),
       height: CGFloat(viewModel.heightInPoints)
     )
+    .accessibilityElement(children: .ignore)
+    .accessibilityLabel(Text(viewModel.accessibilityLabelText))
   }
 }
 
