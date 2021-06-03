@@ -17,6 +17,10 @@ struct Product: Identifiable, Codable {
   let displayName: String
   let height: Int
   let imageUrl: URL
+  // TODO: The following prices should be `Double`s to validate them as currency
+  // amounts. No computation with the prices is currently required, but I think
+  // displaying reasonable prices is important enough to warrant client-side
+  // validation.
   let originalPrice: String
   let price: String
   let width: Int
