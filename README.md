@@ -66,6 +66,9 @@ I tested the app in the simulator on all the different screen sizes available fo
 
 The app also adapts to landscape mode, and in fact that's a nice way to see more detail on smaller tiles.
 
+### Currency data type
+The endpoint provides the original and current prices as strings, so I initially typed those properties of the `Product` model as `String`, to get the data pipeline up and running quickly. Since there was no requirement to make computations with the prices, I never went back and typed them as `Double` and wrote the conversion and formatting code that would entail. But in retrospect, I think getting the prices right is important enough to validate the provided strings as currency amounts in the app.
+
 ### Data update strategy
 Since the specials can change at any time, how should an update be triggered? My preference would be via push notification, but that’s out of scope for this exercise.
 
