@@ -10,7 +10,7 @@ import XCTest
 
 class ProductTileViewModelTests: XCTestCase {
   let discountedProduct = Product(
-    displayName: "Canteloupe",
+    displayName: "Cantaloupe",
     height: 8,
     imageUrl: URL(string: "https://example.org")!,
     originalPrice: "2.99",
@@ -19,7 +19,7 @@ class ProductTileViewModelTests: XCTestCase {
   )
 
   let fullPriceProduct = Product(
-    displayName: "Canteloupe",
+    displayName: "Cantaloupe",
     height: 8,
     imageUrl: URL(string: "https://example.org")!,
     originalPrice: "1.99",
@@ -38,7 +38,7 @@ class ProductTileViewModelTests: XCTestCase {
 
     let expectedAccessibilityLabelText =
       """
-      Canteloupe. Regular price $2.99, now $1.99
+      Cantaloupe. Regular price $2.99, now $1.99
       """
     XCTAssertEqual(
       viewModel.accessibilityLabelText,
@@ -57,7 +57,7 @@ class ProductTileViewModelTests: XCTestCase {
 
     let expectedAccessibilityLabelText =
       """
-      Canteloupe. $1.99
+      Cantaloupe. $1.99
       """
     XCTAssertEqual(
       viewModel.accessibilityLabelText,
